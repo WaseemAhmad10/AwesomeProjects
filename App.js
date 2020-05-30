@@ -5,10 +5,13 @@ import { Appbar } from 'react-native-paper';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Appbar.Header>
+      <Appbar.Header style={styles.headers}>
         <Appbar.Content title="AwesomeProjects" />
       </Appbar.Header>
-      <Text>Hello Worlds</Text>
+      <View style={styles.mainContentBox}>
+        <Text>Hello Worlds</Text>
+        <Text>Hello Worlds</Text>
+      </View>
     </View>
   );
 }
@@ -17,7 +20,13 @@ const styles = StyleSheet.create({
   container: {
     flex:1,
     backgroundColor: '#fff',
-    alignItems: 'center',
+  },
+  headers:{
+    backgroundColor: '#ab54a2',
     justifyContent: 'center',
   },
+  mainContentBox:{
+    flex:1,
+    alignItems: 'center'
+  }
 });
